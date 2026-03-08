@@ -39,7 +39,7 @@ export default function CreateItem() {
     }
 
     try {
-      const responce = await fetch("http://localhost:3000/items/createItem", {
+      const responce = await fetch("https://ecommerceproject-l76n.onrender.com/items/createItem", {
         method: "POST",
         credentials: "include",
         body: formData,

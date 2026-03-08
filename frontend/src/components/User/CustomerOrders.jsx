@@ -7,7 +7,7 @@ export default function CustomerOrders() {
   const [order, setorder] = useState([]);
 
 useEffect(() => {
-  fetch(`http://localhost:3000/order/${cusId}/CusOrders`, {
+  fetch(`https://ecommerceproject-l76n.onrender.com/order/${cusId}/CusOrders`, {
     method: "GET",
     credentials: "include"
   })

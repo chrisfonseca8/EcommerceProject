@@ -21,7 +21,7 @@ export default function Signup() {
         e.preventDefault();
         try {
 
-            const responce = await fetch(`http://localhost:3000/User/register/${role}`, {
+            const responce = await fetch(`https://ecommerceproject-l76n.onrender.com/User/register/${role}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

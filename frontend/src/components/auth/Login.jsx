@@ -12,7 +12,7 @@ export default function LoginForm() {
         e.preventDefault();
         console.log('function was hit')
         try {
-            const responce = await fetch(`http://localhost:3000/User/login`, {
+            const responce = await fetch(`https://ecommerceproject-l76n.onrender.com/User/login`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

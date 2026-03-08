@@ -35,7 +35,7 @@ export default function CheckOut() {
 
   // Fetch current user (to get saved addresses)
   useEffect(() => {
-    fetch("http://localhost:3000/User/me", { credentials: "include" })
+    fetch("https://ecommerceproject-l76n.onrender.com/User/me", { credentials: "include" })
       .then((res) => {
         if (!res.ok) {
           navigate("/User/Login");

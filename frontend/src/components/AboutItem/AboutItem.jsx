@@ -17,7 +17,7 @@ export default function AboutItem() {
 
   useEffect(() => {
     const gettingItem = async () => {
-      const responce = await fetch(`http://localhost:3000/items/${ItemId}`);
+      const responce = await fetch(`https://ecommerceproject-l76n.onrender.com/items/${ItemId}`);
       const data = await responce.json();
       setItem(data);
       setMainImage(data.images && data.images[0]);

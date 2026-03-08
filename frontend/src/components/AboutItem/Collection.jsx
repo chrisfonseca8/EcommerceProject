@@ -14,7 +14,7 @@ export default function Collection() {
 
    // console.log(queryObj.toString());
    const query = queryObj.toString();
-  fetch(`http://localhost:3000/items/?${query}`)
+  fetch(`https://ecommerceproject-l76n.onrender.com/items/?${query}`)
    .then(res=>res.json())
    .then(data=>{
     console.log(data);

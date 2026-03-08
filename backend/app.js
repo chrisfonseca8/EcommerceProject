@@ -11,7 +11,7 @@ const cookie_Paser = require('cookie-parser')
 const { UserRoutes, ItemRoutes, OrderRouter } = require('./routes/index');
 const session = require('express-session');
 const cors = require("cors");
-const path = require("path")
+import path from "path"
 
 app.use((req, res, next) => {
   console.log("Incoming request:", req.method, req.url)
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 app.use(
     cors({
-        origin: "https://ecommerceproject-l76n.onrender.com/", // Vite default
+        origin: "http://localhost:5173", // Vite default
         credentials: true,
     })
 );
@@ -42,6 +42,9 @@ mongoose.connect(process.env.MONGO_URI)
   .then(()=>console.log("MongoDB connected"))
   .catch(err=>console.log(err));
 
+app.get('/', (req, res) => {
+    res.send('first ecommerce site');
+})
 
 app.use('/items', ItemRoutes);
 app.use('/user', UserRoutes);
@@ -52,11 +55,10 @@ app.use((err, req, res, next) => {
   res.status(500).send(err.message)
 })
 
-app.use(express.static(path.join(_dirname, "frontend/dist")));
-
-app.use((req, res) => {
-  res.sendFile(path.join(_dirname, "../frontend/dist/index.html"));
-});
+app.use(express.static(path.join(_dirname,'/frontend/dist')));
+app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(_dirname,'frontend','dist','index.html'));
+})
 app.listen(3000, () => {
     console.log('litning on port 3000');
 })

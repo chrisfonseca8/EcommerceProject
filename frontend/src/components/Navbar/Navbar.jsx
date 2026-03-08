@@ -14,7 +14,7 @@ export default function NavBar() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await fetch("http://localhost:3000/user/me", {
+        const res = await fetch("https://ecommerceproject-l76n.onrender.com/user/me", {
           credentials: "include"
         });
 
@@ -37,7 +37,7 @@ export default function NavBar() {
   // Logout
   const logout = async () => {
     try {
-      await fetch("http://localhost:3000/user/logout", {
+      await fetch("https://ecommerceproject-l76n.onrender.com/user/logout", {
         method: "POST",
         credentials: "include"
       });

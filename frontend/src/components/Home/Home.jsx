@@ -10,7 +10,7 @@ export default function Home() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const responce = await fetch('http://localhost:3000/items/');
+                const responce = await fetch('https://ecommerceproject-l76n.onrender.com/items/');
                 const data = await responce.json();
                 setProducts(data);
             } catch (error) {

@@ -24,7 +24,7 @@ export default function UpdateItem() {
     const [item,setItem]  = useState({});
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/items/${itemId}`)
+        fetch(`https://ecommerceproject-l76n.onrender.com/items/${itemId}`)
         .then(res=>res.json())
         .then((data)=>{
             console.log(data)
