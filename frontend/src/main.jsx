@@ -19,7 +19,7 @@ import CreateItem from "./components/Items/CreateItem.jsx";
 import UpdateItem from "./components/Items/UpdateItem.jsx";
 
 import CustomerOrders from "./components/User/CustomerOrders.jsx";
-import CheckOut from "./components/CheckOut/Checkout.jsx";
+import CheckOut from "./components/CheckOut/CheckOut.jsx";
 
 const router = createBrowserRouter([
   {
